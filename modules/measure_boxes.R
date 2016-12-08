@@ -26,7 +26,15 @@ measure_boxes_design_UI <- function(id, overview_name = "") {
         ,width = 12,footer = "These measure boxes will be the same as in Pop Profiler",status = "primary"
         
         )
-  ))))
+  ))),
+  fluidRow((
+    box(title = "Metric Boxes Summary",
+        img(src = 'widgets/metric_widgets.png')
+        ,width = 12,footer = "These measure boxes will be the same as in Pop Profiler",status = "primary"
+        
+    )
+  ))
+  )
 }
 
 metric_boxes_UI <- function(id) {
