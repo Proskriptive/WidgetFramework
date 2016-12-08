@@ -11,4 +11,5 @@ library(shiny)
 shinyServer(function(input, output) {
 
   callModule(design_markdown,id = 'table_design', markdown_file_path = "design_documents/table_design.html")
+  callModule(table_sparklines,id ='table_spark_line')
 })
