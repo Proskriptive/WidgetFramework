@@ -169,7 +169,7 @@ header <-
   dashboardHeader(
     title = tags$a(
       tags$img(src = 'Light_bulb_blue_orange.png'),
-      "Provider Profiler",
+      "Data Science Widget Framework",
       href = 'http://www.proskriptive.com',
       target = "_blank"
     ),

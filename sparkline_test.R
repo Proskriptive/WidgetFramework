@@ -56,12 +56,13 @@ sl1 <- sparkline(
 
 sl2 <- sparkline(
   c(4,1,5,7,9,9,8,7,6,6,4,7,8,4,3,2,2,5,6,7),
-  type="line",
+  type="line",width = 200,height = 100,
   fillColor = FALSE,
   lineColor ='red',
   chartRangeMin = -5,
   chartRangeMax = 10
 )
+sl2
 
 # add sparkline as a composite
 spk_composite(sl1, sl2)
@@ -87,3 +88,31 @@ spk_composite(
     type="box"
   )
 )
+
+
+
+products <- data.frame(id = 1:5, 
+                       price = c(10, 15, 12, 8, 9),
+                       rating = c(5, 4, 4, 3, 4),
+                       market_share = percent(c(0.1, 0.12, 0.05, 0.03, 0.14)),
+                       revenue = accounting(c(55000, 36400, 12000, -25000, 98100)),
+                       profit = accounting(c(25300, 11500, -8200, -46000, 65000)))
+products
+sign_formatter <- formatter("span", 
+                           style = x ~ style(color = ifelse(x > 0, "green", 
+                                                            ifelse(x < 0, "red", "black"))))
+sign_formatter(c(-1, 0, 1))
+formattable(products, list(profit = sign_formatter))
+formattable(products)
+
+formattable(products, list(
+  price = color_tile("transparent", "lightblue"),
+  rating = color_bar("lightgreen"),
+  market_share = color_bar("lightblue"),
+  revenue = sign_formatter,
+  profit = sign_formatter))
+
+as.datatable(formattable(products, list(
+  price = color_tile("transparent", "blue"),
+  revenue = sign_formatter,
+  profit = sign_formatter)))
