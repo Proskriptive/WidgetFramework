@@ -1,26 +1,26 @@
 ###widget Dev Help module
+ 
 
-
-table_design_UI <- function(id, overview_name = "") {
-  ns <- NS(id)
-  tagList(title = "Table - Simple" ,
-          fluidRow(box(
-            title = "Simple Table",
-            img(src = 'widgets/Box_with_embeded_table.png')
-          )),
-          fluidRow(box(
-            title = "Scoring Table",
-            img(src = 'widgets/Table_With_Graphical_Scores.png')
-          )),
-          fluidRow(box(
-            title = "Sparkline Table",
-            img(src = 'widgets/table_sparkline.gif')
-          )))
-}
+# table_design_UI <- function(id, overview_name = "") {
+#   ns <- NS(id)
+#   tagList(title = "Table - Simple" ,
+#           fluidRow(box(
+#             title = "Simple Table",
+#             img(src = 'widgets/Box_with_embeded_table.png')
+#           )),
+#           fluidRow(box(
+#             title = "Scoring Table",
+#             img(src = 'widgets/Table_With_Graphical_Scores.png')
+#           )),
+#           fluidRow(box(
+#             title = "Sparkline Table",
+#             img(src = 'widgets/table_sparkline.gif')
+#           )))
+# }
 
 table_sparklines_UI <- function(id) {
   ns <- NS(id)
-  load("./data/climate.RData")
+   load("./data/climate.RData")
   
   
   dat <- mutate(dat, Decade = paste0(Year - Year %% 10, "s"))

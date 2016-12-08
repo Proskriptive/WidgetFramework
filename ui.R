@@ -159,9 +159,7 @@ body <-  dashboardBody(
     tabItem(tabName = "table_design",
             design_markdown_UI('table_design',label = "Tables")) ,
     tabItem(tabName = "table_spark_line",
-            table_sparklines_UI()),
-    tabItem(tabName = "widget3",
-            widget3_UI('widget3')),
+            table_sparklines_UI("table_spark_line")),
     tabItem(tabName = "widget_dev_help",
             widget_dev_help_UI('widget_dev_help'))
   )
