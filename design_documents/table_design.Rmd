@@ -1,0 +1,49 @@
+---
+title: "Table Design"
+output: html_document
+---
+ 
+ 
+
+
+##Table 1 - Simple Table
+
+###UI View
+ 
+###Capabilities
+
+
+###Dependencies
+
+###API
+
+ 
+
+##Table 2 - Table with Graphical Scores
+
+###UI View
+
+![Table 2](../widgets/Table_With_Graphical_Scores.png)
+
+
+###Capabilities
+
+
+###Dependencies
+
+###API
+
+##Table 3 - Score Board Table
+
+###UI View
+
+![Table 3](../widgets/table_sparkline.gif)
+
+###Capabilities
+
+
+###Dependencies
+
+###API
+
+

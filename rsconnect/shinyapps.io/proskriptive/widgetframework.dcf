@@ -3,6 +3,8 @@ title:
 account: proskriptive
 server: shinyapps.io
 appId: 143269
-bundleId: 640980
+bundleId: 641141
 url: https://proskriptive.shinyapps.io/widgetframework/
-when: 1481218831.23809
+when: 1481227278.06911
+asMultiple: FALSE
+asStatic: FALSE

@@ -13,6 +13,8 @@ library(data.table)
 library(reshape2)
 library(dplyr)
 
+source("./modules/design_module.R")
+
 source("./modules/widget1.R")
 source("./modules/widget2.R")
 source("./modules/widget3.R")
@@ -155,7 +157,7 @@ body <-  dashboardBody(
     tabItem(tabName = "box_extension_design",  
             box_extension_design_UI('box_extension_design')) ,
     tabItem(tabName = "table_design",
-            table_design_UI('table_design')) ,
+            design_markdown_UI('table_design',label = "Tables")) ,
     tabItem(tabName = "table_spark_line",
             table_sparklines_UI()),
     tabItem(tabName = "widget3",
